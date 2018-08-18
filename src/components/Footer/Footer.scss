@@ -1,0 +1,31 @@
+$main-color: #f85064;
+$second-color: #414141;
+
+footer {
+  background-color: $second-color;
+  height: 80px;
+  line-height: 80px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+h1 a, .footerInfo a {
+  text-decoration: none;
+  color: darken($main-color, 2%);
+  font-size: 16px;
+  padding: 20px 0;
+  font-weight: bold;
+}
+
+.wrapper {
+  min-width: 700px; 
+  max-width: 1200px;
+  margin: 0 auto;
+  &-header {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

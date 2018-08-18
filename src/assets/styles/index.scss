@@ -1,0 +1,28 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  min-height: 100%;
+	font-size: 16px;
+	position: relative;
+  overflow-x: hidden;
+  background-color: rgb(241, 241, 241);
+  padding-bottom: 80px;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  min-width: 700px; 
+  max-width: 1200px;
+  margin: 0 auto;
+  &-header {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

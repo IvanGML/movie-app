@@ -1,0 +1,25 @@
+$main-color: #f85064;
+$second-color: #414141;
+
+.noAnyResultContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.noAnyResult {
+  font-size: 60px;
+  font-style: normal;
+  font-weight: bolder;
+  color: $second-color;
+  &::first-letter { 
+    font-size: 180%;
+    color: $main-color;
+  }
+}
+
+.newSearch {
+  color: $main-color;
+  text-decoration: none;
+  font-weight: bold;
+}

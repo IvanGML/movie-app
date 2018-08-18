@@ -1,0 +1,95 @@
+$main-color: #f85064;
+$second-color: #414141;
+
+
+.movie {
+  margin: 20px 0;
+  color: $second-color;
+  flex: 0 1 350px;
+  transition: box-shadow .1s;
+  display: flex;
+  flex-direction: column;
+  &:last-of-type() {
+    align-self: flex-start;
+  }
+  &-link-img {
+    font-size: 0;
+  }
+  &-discription {
+    background-color: #dddddd;
+    padding: 10px;
+  }
+  &-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-date {
+    border: 1px solid $second-color;
+    border-radius: 3px;
+    padding: 2px 10px;
+  }
+  a {
+    color: inherit;
+    text-transform: uppercase;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  img {
+    width: 100%;
+  }
+  &:hover {
+    box-shadow: 4px 4px 4px #ccc;
+  }
+  &DiscriptionWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 0 30px;
+    font-size: 1.25em;
+    img {
+      width: 30%;
+    }
+    .awards {
+      display: inline-block;
+      margin: 15px 0;
+      color: #ccc;
+    }
+    .ratingAndNameWrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      h2 {
+        display: inline-block;
+      }
+      .rating {
+        color: #50a91d;
+        border: 2px solid #50a91d;
+        padding: 10px;
+        margin-left: 15px;
+        border-radius: 50%;
+        height: 35px;
+        width: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .yearDurationWrapper span {
+      margin-right: 20px;
+      font-weight: bold; 
+    }
+    .detailDiscription {
+      color: #ccc;
+    }
+  }
+  &Info {
+    width: 60%;
+    h2 {
+      color: $main-color;
+      text-transform: capitalize;
+      margin: 0;
+    }
+  }
+}

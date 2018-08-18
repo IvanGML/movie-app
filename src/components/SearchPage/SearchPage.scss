@@ -1,0 +1,11 @@
+.wrapper {
+  min-width: 700px;
+  max-width: 1200px;
+  margin: 0 auto;
+  &-header {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

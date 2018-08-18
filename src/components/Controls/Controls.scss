@@ -1,0 +1,70 @@
+$main-color: #f85064;
+$second-color: #414141;
+
+.resultControls {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  background-color: #dadada;
+  padding-left: 20px;
+  color: $second-color;
+  font-weight: bold;
+  
+  &Wrapper {
+    margin-right: 0;
+    height: 100%;
+    margin-left: auto;
+  }
+}
+
+.sortByButton {
+  cursor: pointer;
+  align-self: stretch;
+  background-color: transparent;
+  height: 100%;
+  border: none;
+  &.active {
+    color: $main-color;
+    font-weight: bold;
+  }
+  &:hover {
+    background-color: darken(#dadada, 3%);
+  }
+}
+
+.button {
+  background-color: $main-color;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: 0 10px;
+  padding: 5px 30px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color .3s;
+  &-genere {
+    background-color: $second-color;
+  }
+  &-search-single-movie {
+    background-color: #fff;
+    color: $main-color;
+    padding: 15px 30px;
+    &:hover {
+      color: #fff;
+    }
+  }
+  &-search {
+    margin-left: auto;
+    margin-right: 0;
+    padding: 10px 70px;
+  }
+  &:hover {
+    background-color: darken($main-color, 4%);
+  }
+}

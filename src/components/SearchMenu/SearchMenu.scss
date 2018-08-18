@@ -1,0 +1,58 @@
+$main-color: #f85064;
+$second-color: #414141;
+
+header .searchInfo {
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  padding: 30px 0;
+  &Discriber {
+    font-size: 14px;
+  }
+  &Header {
+    font-size: 24px;
+  }
+}
+
+.menuControls {
+  display: flex;
+  align-items: center;
+}
+
+
+.button {
+  background-color: $main-color;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: 0 10px;
+  padding: 5px 30px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color .3s;
+  &Active {
+    background-color: $second-color;
+  }
+  &SearchSingleMovie {
+    background-color: #fff;
+    color: $main-color;
+    padding: 15px 30px;
+    &:hover {
+      color: #fff;
+    }
+  }
+  &Search {
+    margin-left: auto;
+    margin-right: 0;
+    padding: 10px 70px;
+  }
+  &:hover {
+    background-color: darken($main-color, 4%);
+  }
+}
