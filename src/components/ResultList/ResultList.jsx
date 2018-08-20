@@ -29,7 +29,7 @@ class ResultList extends React.Component {
         </ErrorBoundary>
       )) : <NoResult />;
     return (
-      <div className={styles.resultList}>
+      <div className={styles.movies}>
         {listInfo}
       </div>
     );
