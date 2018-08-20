@@ -13,9 +13,10 @@ $second-color: #414141;
   @media(max-width: 700px) {
     width: 100%;
   }
-  &:hover {
-    .movieLinkImg img {
-      filter: contrast(100%);
+  .movieLinkImg {
+    transition: .2s;
+    &:hover {
+      opacity: 0.9;
     }
   }
   &__item {
