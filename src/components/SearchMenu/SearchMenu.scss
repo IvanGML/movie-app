@@ -17,6 +17,17 @@ header .searchInfo {
 .menuControls {
   display: flex;
   align-items: center;
+  @media(max-width: 650px) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .searchInfoDiscriber, button {
+      text-align: center;
+      padding: 10px 0;
+      margin: 0;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
 }
 
 

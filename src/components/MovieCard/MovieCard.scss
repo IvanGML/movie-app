@@ -15,9 +15,6 @@ $second-color: #414141;
   }
   .movieLinkImg {
     transition: .2s;
-    &:hover {
-      opacity: 0.9;
-    }
   }
   &__item {
     display: flex;
@@ -34,6 +31,9 @@ $second-color: #414141;
   }
   &:hover {
     box-shadow: 0 20px 40px -14px rgba(0,0,0,0.35);
+    .movieLinkImg {
+      opacity: 0.9;
+    }
   }
   &LinkImg {
     font-size: 0;

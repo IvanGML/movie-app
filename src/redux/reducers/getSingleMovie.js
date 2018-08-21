@@ -11,7 +11,7 @@ const singleMovieReducer = (state = initialState, action) => {
   switch (action.type) {
     case constants.GET_SINGLE_MOVIE:
       return {
-        moovie: action.payload,
+        movie: action.payload,
       };
     default: return state;
   }

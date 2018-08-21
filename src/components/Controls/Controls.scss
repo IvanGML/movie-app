@@ -9,10 +9,22 @@ $second-color: #414141;
   padding: 0 20px;
   color: $second-color;
   font-weight: bold;
+  @media(max-width: 650px) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto;
+    .founded {
+      width: 100%;
+    }
+    span, div {
+      text-align: center;
+      margin: 5px 0 5px;
+      width: 100%;
+    }
+  }
   
   &Wrapper {
     margin-right: 0;
-    height: 100%;
     margin-left: auto;
   }
 }

@@ -10,7 +10,7 @@ import { ServerRouter } from 'react-router-dom';
 import SearchPage from './components/SearchPage';
 
 import movies from './redux/reducers/getMovies';
-import singleMoovie from './redux/reducers/getSingleMovie';
+import singleMovie from './redux/reducers/getSingleMovie';
 import searchValue from './redux/reducers/getSearchValue';
 
 require('dotenv').config();
@@ -26,7 +26,7 @@ app.use('/static', express.static('dist'));
 app.get('*', (req, res) => {
   const reducers = combineReducers({
     movies,
-    singleMoovie,
+    singleMovie,
     searchValue,
   });
 

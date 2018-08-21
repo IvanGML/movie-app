@@ -25,7 +25,7 @@ describe('[ Reducers ] Get single movie', () => {
 
   it('[GET_SINGLE_MOVIE] should return same state for the action', () => {
     let newState = {
-      moovie: {
+      movie: {
         budget: 21000000,
         genres: ["Animation", "Comedy", "Music"],
         id: 9473,
