@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './SinglePageInfo.scss';
+import { NavLink } from 'react-router-dom';
+import { minToHours } from '../../utils/helpers';
 
 const SinglePageInfoDump = ({movie}) => {
     return (
@@ -11,11 +13,14 @@ const SinglePageInfoDump = ({movie}) => {
                     <span className={styles.rating}>{movie.vote_average}</span>
                 </div>
                 <div className={styles.yearDurationWrapper}>
-                    <span className={styles.year}>{movie.release_date}</span>
-                    <span className={styles.duration}>{movie.runtime}</span>
+                    <div className={styles.year}>Release date: {movie.release_date}</div>
+                    <div className={styles.duration}>Duration: {minToHours(movie.runtime)}</div>
                 </div>
-                {movie.overview}
+                <div className={styles.overview}>
+                    {movie.overview}
+                </div>
             </div>
+            <NavLink to={"/"} className={styles.button}>to home</NavLink>
         </div>
     );
 };

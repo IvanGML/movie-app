@@ -76,9 +76,11 @@ $second-color: #414141;
         align-items: center;
       }
     }
-    .yearDurationWrapper span {
+    .yearDurationWrapper {
       margin-right: 20px;
-      font-weight: bold; 
+      font-weight: bold;
+      font-size: 0.75em;
+      color: #ccc;
     }
     .detailDiscription {
       color: #ccc;
@@ -86,10 +88,49 @@ $second-color: #414141;
   }
   &Info {
     width: 60%;
+    margin-bottom: 50px;
+    & > * {
+      margin-bottom: 15px;
+    }
     h2 {
       color: $main-color;
       text-transform: capitalize;
       margin: 0;
+      @media(max-width: 500px) {
+        line-height: 1em;
+        font-size: 20px;
+      }
     }
+  }
+}
+
+.overview {
+  line-height: 1.5em;
+  @media(max-width: 500px) {
+    line-height: 1em;
+    font-size: 14px;
+  }
+}
+
+.button {
+  position: absolute;
+  background-color: $second-color;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: 0 10px;
+  padding: 15px 60px;
+  cursor: pointer;
+  transition: background-color .3s;
+  bottom: 25px;
+  right: 25px;
+  &:hover {
+    background-color: lighten($main-color, 4%);
   }
 }
