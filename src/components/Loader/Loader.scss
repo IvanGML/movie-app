@@ -1,0 +1,23 @@
+$main-color: #f85064;
+$second-color: #414141;
+
+@keyframes rotateit {
+  from { transform: rotate(360deg);	}
+  to { transform: rotate(0deg); }
+}
+
+.loader {
+  height: 100px;
+  width: 100px;
+  background: url('../../assets/images/roll-film-2.png');
+  background-size: contain;
+  animation: rotateit 1.8s infinite linear;
+}
+
+.loaderWrapper {
+  height: 212px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

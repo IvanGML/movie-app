@@ -17,11 +17,22 @@ header .searchInfo {
 .menuControls {
   display: flex;
   align-items: center;
+  @media(max-width: 650px) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .searchInfoDiscriber, button {
+      text-align: center;
+      padding: 10px 0;
+      margin: 0;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
 }
 
 
 .button {
-  background-color: $main-color;
+  background-color: $second-color;
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
@@ -37,7 +48,7 @@ header .searchInfo {
   cursor: pointer;
   transition: background-color .3s;
   &Active {
-    background-color: $second-color;
+    background-color: $main-color;
   }
   &SearchSingleMovie {
     background-color: #fff;
