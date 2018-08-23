@@ -10,9 +10,9 @@ import './assets/styles/index.scss';
 
 hydrate(
   <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
+    {/* <PersistGate loading={null} persistor={persistor}> */}
       <SearchPage />
-    </PersistGate>
+    {/* </PersistGate> */}
   </Provider>,
   document.getElementById('app')
 );
