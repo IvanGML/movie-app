@@ -2,12 +2,8 @@ import axios from 'axios';
 import constants from '../constants';
 
 const makeRequest = (id) => {
-<<<<<<< HEAD
   const request = axios.get(`https://react-cdp-api.herokuapp.com/movies/${id}`);
   return request;
-=======
-  return axios.get(`http://react-cdp-api.herokuapp.com/movies/${id}`);
->>>>>>> 91802d7766c2e26aaf1da3caa5bb2a7f84a552df
 };
 
 const fetchMovie = id => (dispatch) => {
