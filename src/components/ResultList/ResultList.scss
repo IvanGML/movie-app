@@ -1,13 +1,10 @@
 $main-color: #f85064;
 $second-color: #414141;
 
-.resultList {
+.movies {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  // &::after {
-  //   content: "";
-  //   flex: auto;
-  // }
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-

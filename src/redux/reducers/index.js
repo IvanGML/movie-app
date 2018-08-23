@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 import movies from './getMovies';
-import singleMoovie from './getSingleMovie';
+import singleMovie from './getSingleMovie';
 import searchValue from './getSearchValue';
 
 const rootReducer = combineReducers({
   movies,
-  singleMoovie,
+  singleMovie,
   searchValue,
 });
 

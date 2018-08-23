@@ -12,6 +12,7 @@ $second-color: #414141;
   font-style: normal;
   font-weight: bolder;
   color: $second-color;
+  text-align: center;
   &::first-letter { 
     font-size: 180%;
     color: $main-color;

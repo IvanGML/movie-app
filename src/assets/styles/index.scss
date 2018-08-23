@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after { 
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
@@ -16,7 +22,8 @@ body {
 }
 
 .wrapper {
-  min-width: 700px; 
+  // padding: 0 25px;
+  min-width: 320px; 
   max-width: 1200px;
   margin: 0 auto;
   &-header {

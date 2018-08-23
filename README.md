@@ -1,5 +1,7 @@
 ## Quick Start
 
+go to app https://ivangml.github.io/movie-app/dist/
+
 ``` bash
 # Install dependencies
 npm install

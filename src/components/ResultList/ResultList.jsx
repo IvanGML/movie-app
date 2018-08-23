@@ -1,25 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-import fetchMovies from '../../redux/actions/fetchMovies';
 import styles from './ResultList.scss';
 import ErrorBoundary from '../ErrorBoundary';
 import NoResult from '../NoResult';
 import MovieCard from '../MovieCard';
+import fetchMovies from '../../redux/actions/fetchMovies';
 
 
 class ResultList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   componentDidMount() {
-    this.props.fetchMovies();
+    this.props.fetchMovies()
   }
-
+  
   render() {
     const moviesArr = this.props.movies.data ? this.props.movies.data : [];
     const listInfo = moviesArr ?
@@ -29,7 +24,7 @@ class ResultList extends React.Component {
         </ErrorBoundary>
       )) : <NoResult />;
     return (
-      <div className={styles.resultList}>
+      <div className={styles.movies}>
         {listInfo}
       </div>
     );
@@ -48,7 +43,6 @@ const mapDispatchToProps = dispatch => (
 );
 
 ResultList.propTypes = {
-  fetchMovies: PropTypes.func.isRequired,
   movies: PropTypes.shape({
     data: PropTypes.array,
     total: PropTypes.number,
