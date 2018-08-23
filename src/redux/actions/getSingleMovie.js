@@ -2,7 +2,7 @@ import axios from 'axios';
 import constants from '../constants';
 
 const makeRequest = (id) => {
-  const request = axios.get(`http://react-cdp-api.herokuapp.com/movies/${id}`);
+  const request = axios.get(`https://react-cdp-api.herokuapp.com/movies/${id}`);
   return request;
 };
 
