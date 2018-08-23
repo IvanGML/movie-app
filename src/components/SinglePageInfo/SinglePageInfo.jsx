@@ -9,7 +9,7 @@ class SinglePageInfo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoaded: false,
+      isLoaded: true,
     };
   }
 
@@ -28,21 +28,24 @@ class SinglePageInfo extends React.Component {
   */
 
   fetched(prev, curr) {
-    this.setState({isLoaded: true});
+    this.setState({isLoaded: false});
     if (prev === curr) {
-      this.setState({isLoaded: false});
+      this.setState({isLoaded: true});
       return;
     } else {
       setTimeout(() => {
-        this.fetched(parseInt(this.props.singleMovie.movie.id,10), parseInt(this.props.match.params.id,10));
+        const fetchedId = !!this.props.singleMovie.movie ? this.props.singleMovie.movie.id : 0;
+        this.fetched(parseInt(fetchedId,10), parseInt(this.props.match.params.id,10));
+        // this.fetched(parseInt(this.props.singleMovie.movie.id,10), parseInt(this.props.match.params.id,10));
       }, 500);
     }
   }
 
   componentDidMount() {
     const { id } = this.props.match.params;
-    this.fetched(parseInt(this.props.singleMovie.movie.id,10), parseInt(this.props.match.params.id,10));
     this.props.fetchMovie(id);
+    const fetchedId = !!this.props.singleMovie.movie ? this.props.singleMovie.movie.id : 0;
+    this.fetched(parseInt(fetchedId,10), parseInt(this.props.match.params.id,10));
   }
 
   componentWillReceiveProps({ location, match }) {
@@ -58,10 +61,12 @@ class SinglePageInfo extends React.Component {
 
 
   render() {
-    let { movie } = this.props.singleMovie;
+    let movie = !!this.props.singleMovie.movie ? this.props.singleMovie.movie : false;
+    console.log('movie', movie);
+    console.log('this.props.singleMovie.movie', this.props.singleMovie.movie);
     return (
       <React.Fragment>
-        {this.state.isLoaded && movie
+        {!this.state.isLoaded && movie
           ? <Loader />
           : <SinglePageInfoDump movie={movie} />}
       </React.Fragment>

@@ -13,7 +13,7 @@ import Footer from '../Footer';
 
 class SearchPage extends Component {
   render() {
-    let results = this.props.movies.movies.data.length > 0;
+    let results = this.props.movies.movies.data ? this.props.movies.movies.data.length > 0 : false;
     return (
       <HashRouter>
         <Fragment>
@@ -28,7 +28,7 @@ class SearchPage extends Component {
           <main>
             <div className={styles.wrapper}>
               <Controls />
-              {results ? <ResultList /> : <NoResult />}
+              {true ? <ResultList /> : <NoResult />}
             </div>
           </main>
           <Footer />

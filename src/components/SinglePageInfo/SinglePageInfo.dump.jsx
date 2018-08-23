@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { minToHours } from '../../utils/helpers';
 
 const SinglePageInfoDump = ({movie}) => {
+    console.log(movie);
     return (
         <div className={styles.movieDiscriptionWrapper} key='movie'>
             <img src={movie.poster_path} alt={movie.title} />
