@@ -10,14 +10,19 @@ import Controls from '../Controls';
 import ResultList from '../ResultList';
 import NoResult from '../NoResult';
 import Footer from '../Footer';
+import fetchMovies from '../../redux/actions/fetchMovies';
+import { bindActionCreators } from 'redux';
 
 class SearchPage extends Component {
+  componentDidMount() {
+    this.props.fetchMovies()
+  }
   render() {
     let results = this.props.movies.movies.data ? this.props.movies.movies.data.length > 0 : false;
     return (
       <HashRouter>
         <Fragment>
-        <Favicon url="https://vk.com/doc20775422_473444080?hash=857a414e8d39ecc880&dl=6cc190cdaac80c9968" />
+          <Favicon url="https://vk.com/doc20775422_473444080?hash=857a414e8d39ecc880&dl=6cc190cdaac80c9968" />
           <Header>
             <Switch>
               <Route path="/film/:id" component={SinglePageInfo} />
@@ -28,7 +33,7 @@ class SearchPage extends Component {
           <main>
             <div className={styles.wrapper}>
               <Controls />
-              {true ? <ResultList /> : <NoResult />}
+              {results ? <ResultList /> : <NoResult />}
             </div>
           </main>
           <Footer />
@@ -38,8 +43,13 @@ class SearchPage extends Component {
   }
 }
 
-const mapStateToProps = ({ movies }) => ({
-  movies
-});
+const mapStateToProps = ({ movies }) => ({ movies });
 
-export default connect(mapStateToProps)(SearchPage);
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({
+    fetchMovies,
+  }, dispatch)
+);
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchPage);
